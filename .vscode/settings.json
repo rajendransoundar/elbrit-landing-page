@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggestionActions.enabled": true,
+  "typescript.format.enable": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "prettier.printWidth": 100,
+  "[css]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
+  }
+}
