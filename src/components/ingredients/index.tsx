@@ -1,3 +1,63 @@
+import Image from "next/image";
+
+export default function IngredientsSection() {
+  return (
+    <section className="ingredients-section">
+      {/* Title Card */}
+      <div className="ingredients-row">
+        <div className="ingredients-title-card">
+          <h4>INGREDIENTS</h4>
+          <h2>Better Ingredients</h2>
+          <p>
+            {`Only the best when you choose products offered on our platform - high-quality
+            ingredients for high quality products!`}
+          </p>
+        </div>
+        {ingredients?.slice(0, 2).map((item) => (
+          <div key={item?.id} className="ingredients-card">
+            <Image
+              src={item?.image}
+              alt={item?.title || "Ingredient Image"}
+              width={410}
+              height={226}
+            />
+            <h3>{item?.title}</h3>
+            <p>{item?.description}</p>
+            <a href="#" className="see-more-link">
+              SEE MORE
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div className="ingredients-row">
+        {ingredients.slice(2, 5).map((item) => (
+          <div key={item?.id} className="ingredients-card">
+            <Image
+              src={item?.image}
+              alt={item?.title || "Ingredient Image"}
+              width={410}
+              height={226}
+            />
+            <h3>{item?.title}</h3>
+            <p>{item?.description}</p>
+            <a href="#" className="see-more-link">
+              SEE MORE
+            </a>
+          </div>
+        ))}
+        <Image
+          className="ingredents-bg"
+          src="https://s3-alpha-sig.figma.com/img/481a/5bc5/e968343e02ead9caa7924ddcbe67f484?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ECT-2d9o0xeGiuLrTDP4Fg~-xmLM-PiDajAUBDLFOjYJ8Qv044KHcVrxhTlhuwqUYIYGSPQmm4Puneu~q83SEBfE3Czjc7EBul7b-BBqCGYku65mBag2jFzlMP36oOYDIGtr0pDKRBUsa4ngDR1v1VYoHK2p6wX-7UCCSnxl6vnz9E6riAjjeSriGsb0-lUdIB7O3ytnwYoiMZblkScOxGofXem8q9zG3jkNyiZpP-6YSGTRqLLbRcZL2hbwdHT0Z8i6bOP17MyahNJXzb2z630WVR7V9L8V6PGwhaHWq7DQGcMGS3GaR1QNB04O9DEL-E-ovXu1-m4aegNQI2xZCQ__"
+          alt="Ingredient Image"
+          width={115}
+          height={226}
+        />
+      </div>
+    </section>
+  );
+}
+
 const ingredients = [
   {
     id: 1,
@@ -35,45 +95,3 @@ const ingredients = [
       "https://s3-alpha-sig.figma.com/img/9f1f/4b6a/35f9c69109d60d6aacc825461a966f41?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qvFXJJPWCC4DkzvnUV7J82T83HmwHzmD6DN~nfkQ9sRCdCAaD8TrCUgRxB3-CnZ2mQrU3hScBwEt5wF1SyX~uYUS64xyKN0akacB6jCIAGYqlbP2e45fg7gVQxH-4zTXUtY01WfKsy0Dqaoj1-XdPE9CATWTODrUxW1J~jOVkNk2b2FcXBmFq-Pt9ZXgY0sfYMlKkO2hPG0h5LWDQuiCAHAEKRBpzsE0fU92xM-jp6uG0hI6MvGe8n-lYAtnOk1Z76gh8qUJQIogCzndBlsV0RgoOfbHvyy4fI6yC4gLO~ojCarO2WzQNK8TMfb0vsbrDM~5m2Sg-hDQD5f27Wutww__",
   },
 ];
-export default function index() {
-  return (
-    <section>
-      <div className="ingredients-row1">
-        <div className="ingredients-title-card"></div>
-      </div>
-      <div className="ingredients-row2"></div>
-    </section>
-  );
-}
-
-{
-  /* <section>
-  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
-    <div>
-      <h2>Better Ingredients</h2>
-      <p>
-        Only the best when you choose products offered on our platform - high-quality ingredients
-        for high-quality products!
-      </p>
-    </div>
-    {ingredients?.map((item) => (
-      <div
-        key={item?.id}
-        style={{
-          backgroundColor: "#e0f7ff",
-          padding: "20px",
-          borderRadius: "10px",
-          textAlign: "center",
-        }}
-      >
-        <Image src={item?.image} alt={item?.title} width={410} height={226}></Image>
-        <h3>{item?.title}</h3>
-        <p>{item?.description}</p>
-        <a href="#" style={{ color: "#0056b3", textDecoration: "none" }}>
-          SEE MORE
-        </a>
-      </div>
-    ))}
-  </div>
-</section>; */
-}
