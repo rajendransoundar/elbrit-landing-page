@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 
 export default function IngredientsSection() {
@@ -13,39 +14,10 @@ export default function IngredientsSection() {
             ingredients for high quality products!`}
           </p>
         </div>
-        {ingredients?.slice(0, 2).map((item) => (
-          <div key={item?.id} className="ingredients-card">
-            <Image
-              src={item?.image}
-              alt={item?.title || "Ingredient Image"}
-              width={410}
-              height={226}
-            />
-            <h3>{item?.title}</h3>
-            <p>{item?.description}</p>
-            <a href="#" className="see-more-link">
-              SEE MORE
-            </a>
-          </div>
-        ))}
+        {ingredients?.slice(0, 2).map(renderIngredientCard)}
       </div>
-
       <div className="ingredients-row">
-        {ingredients.slice(2, 5).map((item) => (
-          <div key={item?.id} className="ingredients-card">
-            <Image
-              src={item?.image}
-              alt={item?.title || "Ingredient Image"}
-              width={410}
-              height={226}
-            />
-            <h3>{item?.title}</h3>
-            <p>{item?.description}</p>
-            <a href="#" className="see-more-link">
-              SEE MORE
-            </a>
-          </div>
-        ))}
+        {ingredients.slice(2, 5).map(renderIngredientCard)}
         <Image
           className="ingredents-bg"
           src="https://s3-alpha-sig.figma.com/img/481a/5bc5/e968343e02ead9caa7924ddcbe67f484?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ECT-2d9o0xeGiuLrTDP4Fg~-xmLM-PiDajAUBDLFOjYJ8Qv044KHcVrxhTlhuwqUYIYGSPQmm4Puneu~q83SEBfE3Czjc7EBul7b-BBqCGYku65mBag2jFzlMP36oOYDIGtr0pDKRBUsa4ngDR1v1VYoHK2p6wX-7UCCSnxl6vnz9E6riAjjeSriGsb0-lUdIB7O3ytnwYoiMZblkScOxGofXem8q9zG3jkNyiZpP-6YSGTRqLLbRcZL2hbwdHT0Z8i6bOP17MyahNJXzb2z630WVR7V9L8V6PGwhaHWq7DQGcMGS3GaR1QNB04O9DEL-E-ovXu1-m4aegNQI2xZCQ__"
@@ -57,6 +29,17 @@ export default function IngredientsSection() {
     </section>
   );
 }
+
+const renderIngredientCard = (item: any) => (
+  <div key={item?.id} className="ingredients-card">
+    <Image src={item?.image} alt={item?.title || "Ingredient Image"} width={410} height={226} />
+    <h3>{item?.title}</h3>
+    <p>{item?.description}</p>
+    <a href="#" className="see-more-link">
+      SEE MORE
+    </a>
+  </div>
+);
 
 const ingredients = [
   {
