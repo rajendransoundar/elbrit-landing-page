@@ -18,9 +18,9 @@ export const CliniStudied = () => {
           <path
             d="M13.7593 36.4625L16.8818 39.7667C16.999 39.8848 17.1385 39.9785 17.2921 40.0424C17.4457 40.1064 17.6103 40.1393 17.7767 40.1393C17.9431 40.1393 18.1079 40.1064 18.2615 40.0424C18.4151 39.9785 18.5544 39.8848 18.6716 39.7667L25.1371 32.7452"
             stroke="white"
-            stroke-width="3"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
           />
         </g>
         <defs>

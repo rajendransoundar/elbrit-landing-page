@@ -1,16 +1,18 @@
 import { CliniStudied, FreeShip, GmoFree, MadeInIndia, NoRisk, VegFrndly } from "../svsIcons";
 export default function index() {
   return (
-    <div className="icons-card-section">
-      <div className="icons-card-container">
-        {iconsCardData?.map((item) => (
-          <div key={item?.id} className="icons-card">
-            <div className="icon-div">{item?.icon}</div>
-            <h3>{item?.title}</h3> <p>{item?.description}</p>
-          </div>
-        ))}
+    <section className="icon-container-section">
+      <div className="icons-card-section">
+        <div className="icons-card-container">
+          {iconsCardData?.map((item) => (
+            <div key={item?.id} className="icons-card">
+              <div className="icon-div">{item?.icon}</div>
+              <h3>{item?.title}</h3> <p>{item?.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

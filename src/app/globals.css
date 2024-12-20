@@ -10,10 +10,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-section{
+.d-flex {
+  display: flex;
+}
+section {
   margin: 10px 0;
 }
+
 /* footer */
 .footer-container {
   background-color: var(--main-color);
@@ -86,6 +89,7 @@ section{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex: 1;
 }
 .latest-news-col:nth-child(odd) .latest-news-card:nth-child(2) {
   height: 175px;
@@ -131,6 +135,7 @@ section{
   font-weight: bold;
   color: #fff;
 }
+
 
 /* Ingredients section */
 .ingredients-section {
@@ -212,7 +217,12 @@ section{
   object-fit: contain;
 }
 
+
 /* icons card section */
+.icon-container-section {
+  background: linear-gradient(to bottom, var(--secondary-color) 40%, #fff 60%);
+  margin-top: 0 !important;
+}
 .icons-card-section {
   background-color: var(--main-color);
   margin: 0 120px;
@@ -265,4 +275,100 @@ section{
   height: 50px;
   width: 50px;
   margin: auto;
+}
+
+
+/* Main section */
+.main-section {
+  margin-bottom: 0 !important;
+}
+.main-section-container {
+  background-color: var(--secondary-color);
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+.main-heading {
+  text-align: center;
+  font-size: 100px;
+  color: var(--dark-blue);
+  font-weight: 700;
+  line-height: 20px;
+}
+.main-section-row {
+  margin: 0 150px;
+  justify-content: space-around;
+}
+.main-section-col {
+  flex: 1;
+  padding: 20px;
+}
+.main-section-col:nth-child(1) {
+  margin: auto 0;
+}
+.main-left-content {
+  margin-left: 30px;
+}
+.main-section-col:nth-child(1) h4 {
+  color: var(--font-light);
+  font-weight: 400;
+}
+.main-section-col:nth-child(1) h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--main-color);
+  line-height: 30px;
+  font-family: Jost;
+  text-align: left;
+}
+.explore-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 50px 10px 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main-section-col:nth-child(2) {
+  position: relative;
+}
+.main-section-col:nth-child(2) img {
+  position: absolute;
+  top: -110px;
+  z-index: 1;
+  left: -10px;
+  height: 360px;
+}
+.box-div {
+  background-color: #ffe9b5;
+  border-radius: 130px 0px 130px 0px;
+  position: absolute;
+  width: 300px;
+  height: 280px;
+  z-index: 0;
+}
+.main-icon-card {
+  gap: 20px;
+  margin: 5px 0;
+  padding: 10px 0;
+}
+.main-section-col:nth-child(3) {
+  margin-top: 40px;
+}
+.main-icon-card img {
+  height: 60px;
+  width: 60px;
+}
+.card-content h3 {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-color);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.card-content p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: var(--font-light);
 }
